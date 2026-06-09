@@ -5,8 +5,7 @@ author: "Kailey Epstein"
 description: "An on device AI-based, multimodal, mobile application to enhance navigation and situational awareness for blind or visually impaired users."
 status: "Active"
 repo_url: "https://github.com/uob-at/nav-si"
-demo_url: "#"
-doc_url: "#"
+order: 3
 ---
 
 ## Overview
@@ -22,13 +21,3 @@ The system operates entirely through a voice-controlled interface, allowing user
 
 ## Installation
 NavSi is built using the Flutter framework. To run this project locally, clone the repository and set up your environment:
-
-## Installation
-NavSi is built using the Flutter framework. To run this project locally, clone the repository and set up your environment:
-
-```bash
-git clone https://github.com/uob-at/nav-si
-cd nav-si
-flutter pub get
-flutter run
-```

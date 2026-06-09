@@ -5,6 +5,7 @@ short_title: "Agentic UI Navigation Without Vision"
 author: "Dixant Pant"
 description: "An AI agent that navigates websites using only screen reader output to uncover real-world accessibility barriers."
 status: "Completed"
+order: 2
 ---
 
 ## Overview

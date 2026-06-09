@@ -4,12 +4,9 @@ title: "AudioTac: Transforming Photographs into Dual-Layer SVGs for Audio-Tactil
 short_title: "AudioTac"
 author: "Juan Pablo Ruiz Partida"
 description: "An automated system converting photographs into interactive SVGs for audio-tactile exploration."
-timeline: "Jan 2025 – Apr 2025"
-association: "University of Bristol"
-status: "Completed (BSc Dissertation, 40CP)"
+status: "Completed"
 repo_url: "https://github.com/jp-rp/audiotac"
-demo_url: ""
-doc_url: ""
+order: 1
 ---
 
 ## Overview
