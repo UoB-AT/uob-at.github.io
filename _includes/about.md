@@ -6,5 +6,8 @@
   the "About" heading is added automatically by the homepage.
 -->
 
-Add a description of the University of Bristol Assistive Technology Lab here:
-what the lab does, the research areas it focuses on, and who is involved.
+The University of Bristol Assistive Technology (UoB AT) Lab is a research group dedicated to making the digital world more inclusive through technology. 
+
+Our work focuses on the intersection of Artificial Intelligence, human-computer interaction, and assistive innovation. By combining advanced computational models with user-centered design, we aim to uncover and eliminate real-world accessibility barriers.
+
+Our lab provides a collaborative environment for students and researchers to apply their skills in software engineering and AI to solve meaningful, real-world problems.
