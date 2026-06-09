@@ -5,6 +5,7 @@
   Do not add a heading here — the "Contact" heading is added automatically.
 -->
 
-Add contact details here, for example an email address such as
-[at-lab@bristol.ac.uk](mailto:at-lab@bristol.ac.uk), and a postal address or
-links to relevant University of Bristol pages.
+The University of Bristol Assistive Technology Lab is led by Dr. Kyle Keane, Senior Lecturer in Assistive Technologies.
+
+* **Lead Researcher**: [Dr. Kyle Keane](https://www.bristol.ac.uk/people/person/Kyle-Keane-3b30cecb-458f-429d-9686-1a6ef5bc6518/)
+* **Email**: kyle.keane@bristol.ac.uk
