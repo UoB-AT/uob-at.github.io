@@ -8,4 +8,4 @@
 The University of Bristol Assistive Technology Lab is led by Dr. Kyle Keane, Senior Lecturer in Assistive Technologies.
 
 * **Lead Researcher**: [Dr. Kyle Keane](https://www.bristol.ac.uk/people/person/Kyle-Keane-3b30cecb-458f-429d-9686-1a6ef5bc6518/)
-* **Email**: kyle.keane@bristol.ac.uk
+* **Email**: coms-keane-dev@bristol.ac.uk

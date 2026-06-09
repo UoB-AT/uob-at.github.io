@@ -7,7 +7,7 @@ description: "A research project benchmarking the accessibility and security of 
 status: "Completed"
 order: 6
 repo_url: "https://github.com/UoB-AT/visual-impairment-security"
-doc_url: "https://uob-at.github.io/visual-impairment-security/profiles/"
+doc_url: "https://uob-at.github.io/visual-impairment-security/"
 ---
 
 ## Overview
