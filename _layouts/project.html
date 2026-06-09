@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="project-page">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    <div class="project-meta">
+      {% if page.author %}<span>Author: {{ page.author }}</span><br>{% endif %}
+      {% if page.timeline %}<span>Timeline: {{ page.timeline }}</span><br>{% endif %}
+      {% if page.association %}<span>Association: {{ page.association }}</span><br>{% endif %}
+      {% if page.status %}<span>Status: {{ page.status }}</span>{% endif %}
+    </div>
+  </header>
+
+  <div class="project-links">
+    {% if page.repo_url %}<a href="{{ page.repo_url }}" class="btn">View Repository</a>{% endif %}
+    {% if page.demo_url %}<a href="{{ page.demo_url }}" class="btn btn-secondary">Live Demo</a>{% endif %}
+    {% if page.doc_url %}<a href="{{ page.doc_url }}" class="btn btn-secondary">Read Documentation</a>{% endif %}
+  </div>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+</article>

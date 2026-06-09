@@ -1,0 +1,19 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler dependencies
+.bundle/
+vendor/
+
+# macOS system files
+.DS_Store
+
+# Editor/IDE configurations
+.vscode/
+.idea/
+
+# Local configuration
+Gemfile.lock
