@@ -3,7 +3,7 @@ layout: project
 title: "AudioTac: Transforming Photographs into Dual-Layer SVGs for Audio-Tactile Interaction"
 short_title: "AudioTac"
 author: "Juan Pablo Ruiz Partida"
-description: "Project Description"
+description: "An automated system converting photographs into interactive SVGs for audio-tactile exploration."
 timeline: "Jan 2025 – Apr 2025"
 association: "University of Bristol"
 status: "Completed (BSc Dissertation, 40CP)"
@@ -33,7 +33,7 @@ If you are a student interested in working with our lab, AudioTac offers hands-o
 To run this project locally, clone the repository and set up the respective backend and frontend environments:
 
 ```bash
-git clone [https://github.com/jp-rp/audiotac.git](https://github.com/jp-rp/audiotac.git)
+git clone https://github.com/jp-rp/audiotac.git
 cd audiotac
 
 # Backend Setup (Python)
@@ -44,3 +44,4 @@ pip install -r requirements.txt
 cd ../frontend/audiotac
 flutter pub get
 flutter run
+```

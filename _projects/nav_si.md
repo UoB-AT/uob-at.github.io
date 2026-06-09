@@ -22,3 +22,4 @@ Add installation instructions or code snippets here.
 
 ```bash
 npm install project-name
+```

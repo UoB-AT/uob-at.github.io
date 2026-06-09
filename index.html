@@ -2,56 +2,36 @@
 layout: default
 title: University of Bristol Assistive Technology Lab
 ---
-<!-- About section -->
+<!-- About section — text lives in _includes/about.md (edit that file) -->
 <section id="about" aria-labelledby="about-heading">
   <h2 id="about-heading">About</h2>
-  <p>Add lab description here.</p>
+  {% capture about_content %}{% include about.md %}{% endcapture %}
+  {{ about_content | markdownify }}
 </section>
 
-<!-- Projects section -->
+<!-- Projects section — cards are generated automatically from _projects/*.md -->
 <section id="projects" aria-labelledby="projects-heading">
   <h2 id="projects-heading">Our Projects</h2>
-  
-  <ul class="project-list" role="list" aria-label="Research Projects">
-    
-    <!-- AudioTac -->
-    <li class="project-card">
-      <article>
-        <h3>
-          <a href="{{ '/projects/audio_tac.html' | relative_url }}">AudioTac: Dual-Layer SVGs</a>
-        </h3>
-        <p class="author">Author: Juan Pablo Ruiz Partida</p>
-        <p class="description">An automated system converting photographs into interactive SVGs for audio-tactile exploration.</p>
-      </article>
-    </li>
-    
-    <!-- NavSi -->
-    <li class="project-card">
-      <article>
-        <h3>
-          <a href="{{ '/projects/nav_si.html' | relative_url }}">NavSi</a>
-        </h3>
-        <p class="author">Author: Kailey Epstein</p>
-        <p class="description">Project Description</p>
-      </article>
-    </li>
 
-    <!-- Agentic UI Navigation -->
+  <ul class="project-list" role="list" aria-label="Research projects">
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects %}
     <li class="project-card">
-      <article>
-        <h3>
-          <a href="{{ '/projects/non_visual_agent.html' | relative_url }}">Agentic UI Navigation Without Vision</a>
+      <article aria-labelledby="project-{{ forloop.index }}-title">
+        <h3 id="project-{{ forloop.index }}-title">
+          <a href="{{ project.url | relative_url }}">{{ project.short_title | default: project.title }}</a>
         </h3>
-        <p class="author">Author: Dixant Pant</p>
-        <p class="description">An AI agent that navigates websites using only screen reader output to uncover real-world accessibility barriers.</p>
+        {% if project.author %}<p class="author">Author: {{ project.author }}</p>{% endif %}
+        {% if project.description %}<p class="description">{{ project.description }}</p>{% endif %}
       </article>
     </li>
-
+    {% endfor %}
   </ul>
 </section>
 
-<!-- Contact section -->
+<!-- Contact section — text lives in _includes/contact.md (edit that file) -->
 <section id="contact" aria-labelledby="contact-heading">
   <h2 id="contact-heading">Contact</h2>
-  <p>Add contact details here.</p>
+  {% capture contact_content %}{% include contact.md %}{% endcapture %}
+  {{ contact_content | markdownify }}
 </section>

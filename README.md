@@ -2,15 +2,18 @@
 This repository contains the source code for the University of Bristol Assistive Technology Lab organization website. It is built using [Jekyll](https://jekyllrb.com/) and hosted via GitHub Pages.
 
 ## Architecture
-The site uses a static, hardcoded architecture to ensure absolute control over the DOM structure, prioritizing screen reader accessibility and clear structural boundaries.
-* **`_projects/`**: Contains the Markdown files for each individual research project.
-* **`_layouts/`**: Contains the HTML templates (`default.html` for the shell, `project.html` for individual projects).
-* **`assets/css/`**: Contains the WCAG AAA compliant styling.
-* **`index.html`**: The static homepage containing manually defined lists for maximum structural control.
+The site is content-driven: research projects and the About/Contact text are defined in Markdown files, and the homepage assembles itself from them. This keeps the markup simple and accessible while letting contributors edit the site without touching HTML.
+* **`_projects/`**: One Markdown file per research project. Each file becomes both a project page and a card on the homepage automatically.
+* **`_includes/about.md`** and **`_includes/contact.md`**: The editable About and Contact text shown on the homepage.
+* **`_layouts/`**: The HTML templates (`default.html` for the shell, `project.html` for individual projects).
+* **`assets/css/`**: The WCAG AAA compliant styling (University of Bristol red, Apple/system font).
+* **`index.html`**: The homepage. It generates the project list from `_projects/` and renders the About/Contact includes — you should not need to edit it to add content.
 
-## Adding new projects
-1. Create the Project Page: Create a new `.md` file inside the `projects/` directory using the existing YAML front matter structure
-2. Update the Homepage: Open `index.html` and manually add a new `<li>` element inside the `<ul class="project-list"> section to ensure the new project is linked and accessible from the root domain. 
+## Editing the site
+See [CONTRIBUTING.md](CONTRIBUTING.md) for step-by-step instructions on adding a new project and editing the About and Contact sections. In short:
+* **Add a project:** create a new `.md` file in `_projects/` using the front matter template — the homepage card and project page appear automatically.
+* **Edit About:** edit `_includes/about.md`.
+* **Edit Contact:** edit `_includes/contact.md`.
 
 ## License
 This repository uses a dual-license model:

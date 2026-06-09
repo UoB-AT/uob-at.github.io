@@ -10,9 +10,20 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header role="banner">
+    {% comment %}
+      The site name is the page's <h1> only on the homepage. On project pages
+      the project title is the <h1>, so here the site name is a styled link
+      instead — this keeps a single, correct <h1> per page for screen readers.
+    {% endcomment %}
+    {% if page.url == '/' %}
     <h1>
       <a href="{{ '/' | relative_url }}">University of Bristol Assistive Technology Lab</a>
     </h1>
+    {% else %}
+    <p class="site-title">
+      <a href="{{ '/' | relative_url }}">University of Bristol Assistive Technology Lab</a>
+    </p>
+    {% endif %}
   </header>
 
   <nav role="navigation" aria-label="Main navigation">
