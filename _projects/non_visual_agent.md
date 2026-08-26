@@ -9,7 +9,7 @@ order: 2
 
 ## Overview
 
-The 2026 WebAIM Million report found that 95.9% of homepages contain detectable WCAG failures[cite: 4]. Despite these guidelines, modern websites remain highly challenging for visually impaired individuals to navigate seamlessly. State-of-the-art UI automation agents do not address this issue effectively because they rely on visual screenshots and accessibility trees, providing a fully observable spatial layout that screen reader users do not have access to.
+The 2026 WebAIM Million report found that 95.9% of homepages contain detectable WCAG failures. Despite these guidelines, modern websites remain highly challenging for visually impaired individuals to navigate seamlessly. State-of-the-art UI automation agents do not address this issue effectively because they rely on visual screenshots and accessibility trees, providing a fully observable spatial layout that screen reader users do not have access to.
 
 This project addresses this limitation by formalising screen reader web UI navigation as an intractable Partially Observable Markov Decision Process (POMDP) and introducing an LLM agent restricted entirely to screen reader input and output. Because its observations strictly match those of a human screen reader user, its navigation failures reveal true participation restrictions that traditional static compliance tools fail to detect.
 
