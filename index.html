@@ -2,6 +2,31 @@
 layout: default
 title: University of Bristol Assistive Technology Lab
 ---
+<!-- Events section — cards are generated automatically from _events/*.md.
+     Past events drop off the list automatically (compared against site.time),
+     so nothing needs to be deleted by hand after an event happens. -->
+<section id="events" aria-labelledby="events-heading">
+  <h2 id="events-heading">Events</h2>
+
+  {% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" %}
+  {% assign sorted_events = upcoming_events | sort: "date" %}
+
+  <ul class="event-timeline" role="list" aria-label="Upcoming events">
+    {% for event in sorted_events %}
+    <li class="event-item">
+      <article aria-labelledby="event-{{ forloop.index }}-title">
+        <h3 id="event-{{ forloop.index }}-title">{{ event.title }}</h3>
+        <p class="event-date">
+          <time datetime="{{ event.date | date_to_xmlschema }}">{{ event.date | date: "%A %-d %B %Y, %-l:%M%P" }}&ndash;{{ event.end_time }}</time>
+        </p>
+        {% if event.speakers %}<p class="speaker">{% if event.speakers.size == 1 and event.speakers[0] == "TBA" %}Speakers: TBA{% elsif event.speakers.size == 1 %}Speaker: {{ event.speakers[0] }}{% else %}Speakers: {{ event.speakers | join: ", " }}{% endif %}</p>{% endif %}
+        {% if event.location %}<p class="location">{{ event.location }}</p>{% endif %}
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
 <!-- About section — text lives in _includes/about.md (edit that file) -->
 <section id="about" aria-labelledby="about-heading">
   <h2 id="about-heading">About</h2>

@@ -89,7 +89,47 @@ number to each project (for example `10`, `20`, `30`).
 
 ---
 
-## 2. Edit the About section
+## 2. Add a new event
+
+Each event is a single Markdown file in the [`_events/`](_events/) folder.
+Adding a file there automatically adds it to the "Events" list on the
+homepage — you do not need to edit the homepage by hand. Past events drop
+off the list automatically once their date has passed, so there is nothing
+to delete afterwards.
+
+### Steps
+
+1. In the `_events/` folder, create a new file, e.g. `my_event.md`.
+   The file name only needs to be unique — it does not create a page.
+2. Copy the template below into the file and fill it in.
+3. Commit the file. It appears on the homepage automatically, in date order.
+
+### Template
+
+```markdown
+---
+title: "Event Title"
+date: 2026-10-14 13:30:00 +0100   # start date and time, include UK timezone offset
+end_time: "3:30pm"                # end time shown to visitors
+speakers:                         # optional, list — e.g. ["TBA"] or ["Name One", "Name Two"]
+  - ""
+location: ""                      # optional
+---
+```
+
+### Field reference
+
+| Field      | Required | What it does                                                         |
+| ---------- | -------- | --------------------------------------------------------------------- |
+| `title`    | yes      | Event name, shown as the card heading.                                |
+| `date`     | yes      | Start date and time. Always include the timezone offset (`+0100` for BST, March–October; `+0000` for GMT, October–March). |
+| `end_time` | yes      | End time as plain text, shown after the start time (e.g. `"5:00pm"`). |
+| `speakers` | no       | List of speaker names, shown on the card if set (e.g. `["TBA"]` or `["Name One", "Name Two"]`). |
+| `location` | no       | Room or venue, shown on the card if set.                                |
+
+---
+
+## 3. Edit the About section
 
 The text under **About** on the homepage lives in
 [`_includes/about.md`](_includes/about.md).
@@ -104,7 +144,7 @@ bullet lists.
 
 ---
 
-## 3. Edit the Contact section
+## 4. Edit the Contact section
 
 The text under **Contact** on the homepage lives in
 [`_includes/contact.md`](_includes/contact.md).
@@ -117,7 +157,7 @@ For an email link use `[name@bristol.ac.uk](mailto:name@bristol.ac.uk)`.
 
 ---
 
-## 4. Where everything lives
+## 5. Where everything lives
 
 | What you want to change            | File to edit                          |
 | ---------------------------------- | ------------------------------------- |
@@ -131,7 +171,7 @@ For an email link use `[name@bristol.ac.uk](mailto:name@bristol.ac.uk)`.
 
 ---
 
-## 5. Previewing locally (optional)
+## 6. Previewing locally (optional)
 
 You only need this if you want to preview before pushing. With
 [Ruby and Jekyll installed](https://jekyllrb.com/docs/installation/):
@@ -142,3 +182,6 @@ jekyll serve
 
 Then open <http://localhost:4000>. Otherwise, just commit on GitHub and check the
 live site after a minute or two.
+
+
+

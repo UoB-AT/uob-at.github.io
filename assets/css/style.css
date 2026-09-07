@@ -271,6 +271,75 @@ main {
 }
 
 /* ==========================================================================
+   Events timeline
+   Events are strictly chronological, so a timeline reads more naturally
+   than a card grid and distinguishes this section visually from Projects.
+   ========================================================================== */
+.event-timeline {
+  list-style: none;
+  position: relative;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 2rem;
+}
+
+.event-timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: var(--divider);
+}
+
+.event-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.event-item:last-child {
+  padding-bottom: 0;
+}
+
+.event-item::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0.3rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--card-border);
+}
+
+/* Soonest event gets a filled marker, so "what's next" is shown visually
+   instead of needing a text label. */
+.event-item:first-child::before {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+}
+
+.event-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+
+.event-item .event-date {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.event-item .speaker,
+.event-item .location {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
    Individual project pages
    ========================================================================== */
 .project-page .project-header {
@@ -386,7 +455,7 @@ footer[role="contentinfo"] {
     font-size: 1.2rem;
   }
 
-  .project-list {
+  .project-list{
     grid-template-columns: 1fr;
   }
 

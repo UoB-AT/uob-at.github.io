@@ -6,3 +6,5 @@ url: ""
 collections:
   projects:
     output: true
+  events:
+    output: false 
