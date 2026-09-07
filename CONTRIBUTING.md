@@ -109,21 +109,20 @@ to delete afterwards.
 ```markdown
 ---
 title: "Event Title"
-date: 2026-10-14 13:30:00 +0100   # start date and time, include UK timezone offset
-end_time: "3:30pm"                # end time shown to visitors
-speakers:                         # optional, list — e.g. ["TBA"] or ["Name One", "Name Two"]
-  - ""
-location: ""                      # optional
+date: 2026-10-14 13:30:00 +0000   # always +0000, only used for sorting/hiding past events — never shown
+display: "Wednesday 14 October 2026, 1:30pm–3:30pm"   # exact text shown to visitors — type it exactly as it should appear
+speakers:
+  - "TBA"
+location: ""
 ---
-```
 
 ### Field reference
 
 | Field      | Required | What it does                                                         |
 | ---------- | -------- | --------------------------------------------------------------------- |
 | `title`    | yes      | Event name, shown as the card heading.                                |
-| `date`     | yes      | Start date and time. Always include the timezone offset (`+0100` for BST, March–October; `+0000` for GMT, October–March). |
-| `end_time` | yes      | End time as plain text, shown after the start time (e.g. `"5:00pm"`). |
+| `date`     | yes      | Always write the offset as `+0000`, whatever the real time is. Used only to sort events and drop past ones — it is never shown, so the exact hour doesn't need to be correct. |
+| `display`  | yes      | The exact date/time text shown on the card. Type it exactly as you want visitors to see it. |
 | `speakers` | no       | List of speaker names, shown on the card if set (e.g. `["TBA"]` or `["Name One", "Name Two"]`). |
 | `location` | no       | Room or venue, shown on the card if set.                                |
 

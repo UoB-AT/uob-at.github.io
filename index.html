@@ -17,7 +17,7 @@ title: University of Bristol Assistive Technology Lab
       <article aria-labelledby="event-{{ forloop.index }}-title">
         <h3 id="event-{{ forloop.index }}-title">{{ event.title }}</h3>
         <p class="event-date">
-          <time datetime="{{ event.date | date_to_xmlschema }}">{{ event.date | date: "%A %-d %B %Y, %-l:%M%P" }}&ndash;{{ event.end_time }}</time>
+          <time datetime="{{ event.date | date: "%Y-%m-%d" }}">{{ event.display }}</time>
         </p>
         {% if event.speakers %}<p class="speaker">{% if event.speakers.size == 1 and event.speakers[0] == "TBA" %}Speakers: TBA{% elsif event.speakers.size == 1 %}Speaker: {{ event.speakers[0] }}{% else %}Speakers: {{ event.speakers | join: ", " }}{% endif %}</p>{% endif %}
         {% if event.location %}<p class="location">{{ event.location }}</p>{% endif %}
