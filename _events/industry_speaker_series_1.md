@@ -1,6 +1,6 @@
 ---
 title: "Industry Speaker Series 1"
-date: 2026-10-14 13:30:00 +0100
+date: 2026-10-14 13:30:00 +0000
 end_time: "3:30pm"
 speakers:
   - "TBA"
